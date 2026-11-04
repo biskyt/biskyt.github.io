@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>biskyt · free TV apps</title>
-<meta name="description" content="Free, open-source TV apps by biskyt: MyTVPlayer, MyPlexPlayer and a legal free IPTV playlist.">
+<title>biskyt</title>
+<meta name="description" content="The personal home page of biskyt, with links to biskyt's projects on GitHub, including MyTVPlayer, MyPlexPlayer and a legal free IPTV playlist.">
 <style>
   :root {
     --bg: #f5f7f8; --card: #ffffff; --ink: #15191d; --muted: #56606a; --line: #dce2e6; --accent: #0e8f86;
@@ -14,14 +14,16 @@
     :root { --bg: #101316; --card: #171b1f; --ink: #e9edf0; --muted: #9aa5ae; --line: #2a3137; --accent: #3cc7bc; color-scheme: dark; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.6; padding: 48px 16px 64px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); line-height: 1.6; padding: 48px 16px 64px; overflow-wrap: anywhere; }
   main { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; }
   h1 { font-size: 2.2rem; margin: 0; line-height: 1.2; }
   h1 span { color: var(--accent); }
   .lede { color: var(--muted); margin: 8px 0 0; max-width: 60ch; }
+  section { display: flex; flex-direction: column; gap: 16px; }
+  section > h2 { margin: 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
   .apps { display: grid; gap: 16px; }
   .app { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; display: flex; flex-direction: column; gap: 8px; }
-  .app h2 { margin: 0; font-size: 1.25rem; }
+  .app h3 { margin: 0; font-size: 1.25rem; }
   .app p { margin: 0; color: var(--muted); }
   .links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 4px; }
   a { color: var(--accent); font-weight: 600; }
@@ -33,42 +35,49 @@
 <main>
   <header>
     <h1>biskyt<span>.</span></h1>
-    <p class="lede">Free, open-source apps for watching TV. No ads, no tracking and no data collection.</p>
+    <p class="lede">This is the personal home page of biskyt. Here you find links to my projects. All of them are free and open source.</p>
+    <div class="links">
+      <a href="https://github.com/biskyt/">GitHub profile</a>
+      <a href="https://github.com/biskyt?tab=repositories">All repositories</a>
+    </div>
   </header>
 
-  <section class="apps" aria-label="Apps">
-    <article class="app">
-      <h2>MyTVPlayer</h2>
-      <p>A fast IPTV player for Android TV and Fire TV, with a TV guide, catch-up, films and series. It also works by touch on phones and tablets.</p>
-      <div class="links">
-        <a href="https://biskyt.github.io/MyTVPlayer/">Website</a>
-        <a href="https://github.com/biskyt/MyTVPlayer">Source code</a>
-        <a href="https://github.com/biskyt/MyTVPlayer/releases/latest">Download</a>
-        <a href="https://biskyt.github.io/MyTVPlayer/privacy.html">Privacy policy</a>
-      </div>
-    </article>
+  <section aria-labelledby="tv-projects">
+    <h2 id="tv-projects">TV projects</h2>
+    <div class="apps">
+      <article class="app">
+        <h3>MyTVPlayer</h3>
+        <p>A fast IPTV player for Android TV and Fire TV, with a TV guide, catch-up, films and series. It also works by touch on phones and tablets.</p>
+        <div class="links">
+          <a href="https://biskyt.github.io/MyTVPlayer/">Website</a>
+          <a href="https://github.com/biskyt/MyTVPlayer">Source code</a>
+          <a href="https://github.com/biskyt/MyTVPlayer/releases/latest">Download</a>
+          <a href="https://biskyt.github.io/MyTVPlayer/privacy.html">Privacy policy</a>
+        </div>
+      </article>
 
-    <article class="app">
-      <h2>MyPlexPlayer</h2>
-      <p>A Plex client for Android TV, built on the same player and remote controls as MyTVPlayer.</p>
-      <div class="links">
-        <a href="https://biskyt.github.io/MyPlexPlayer/">Website</a>
-        <a href="https://github.com/biskyt/MyPlexPlayer">Source code</a>
-      </div>
-    </article>
+      <article class="app">
+        <h3>MyPlexPlayer</h3>
+        <p>A Plex client for Android TV, built on the same player and remote controls as MyTVPlayer.</p>
+        <div class="links">
+          <a href="https://biskyt.github.io/MyPlexPlayer/">Website</a>
+          <a href="https://github.com/biskyt/MyPlexPlayer">Source code</a>
+        </div>
+      </article>
 
-    <article class="app">
-      <h2>Legal free IPTV playlist</h2>
-      <p>Channels that their broadcasters stream for free, and public-domain or openly licensed films and series, as an M3U playlist with its own TV guide.</p>
-      <div class="links">
-        <a href="https://biskyt.github.io/legalFreeIPTVplaylist/">Website</a>
-        <a href="https://github.com/biskyt/legalFreeIPTVplaylist">Source code</a>
-      </div>
-    </article>
+      <article class="app">
+        <h3>Legal free IPTV playlist</h3>
+        <p>Channels that their broadcasters stream for free, and public-domain or openly licensed films and series, as an M3U playlist with its own TV guide.</p>
+        <div class="links">
+          <a href="https://biskyt.github.io/legalFreeIPTVplaylist/">Website</a>
+          <a href="https://github.com/biskyt/legalFreeIPTVplaylist">Source code</a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <footer>
-    If you find these apps useful, you can support their development on
+    If you find my work useful, you can support it on
     <a href="https://ko-fi.com/biskyt">Ko-fi</a> or <a href="https://github.com/sponsors/biskyt">GitHub Sponsors</a>.
   </footer>
 </main>
